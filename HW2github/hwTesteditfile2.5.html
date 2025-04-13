@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="hw1.css">
+    <link rel="stylesheet" href="C:\Users\jason\OneDrive\Documents\GitHub\MIS3374\HW2github\hwtesteditfile2.5.css">
     <title>Homework 1</title>
-    <script src="hw1.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,61 +21,35 @@
         </table>
     </header>
     <hr>
+
     <form action="thankyou.html" id="signup-form">
         <table>
-            <tr>
-                <th colspan="4">Patient/Poki Sign-Up Form</th>
-            </tr>
+            <tr><th colspan="4">Patient/Poki Sign-Up Form</th></tr>
+
+            <!-- Name fields -->
             <tr>
                 <td><label for="fname">First Name:</label></td>
                 <td>
-                    <input 
-                    type="text" 
-                    name="fname" 
-                    id="fname" maxlength="30" 
-                    title="Letter, apostrophes, and dashes only" 
-                    required pattern="[a-zA-Z']{1,30}" 
-                    title="Letters only" 
-                    onblur="validatefname()" 
-                    placeholder="First name"
-                    />
+                    <input type="text" name="fname" id="fname" maxlength="30" pattern="[a-zA-Z']{1,30}" required placeholder="First name" onblur="validatefname()" />
                     <span class="error" id="fname-error"></span>
                 </td>
             </tr>
             <tr>
                 <td><label for="mname">Middle Initial:</label></td>
                 <td>
-                    <input 
-                    type="text" 
-                    name="mname" 
-                    id="mname"
-                    maxlength="1" 
-                    title="Letters only"
-                    pattern="[a-zA-Z']{0,1}" 
-                    onblur="validatemname()" 
-                    title="Single letter only" 
-                    placeholder="Middle Initial"
-                    />
+                    <input type="text" name="mname" id="mname" maxlength="1" pattern="[a-zA-Z']{0,1}" placeholder="Middle Initial" onblur="validatemname()" />
                     <span class="error" id="mname-error"></span>
                 </td>
             </tr>
             <tr>
                 <td><label for="lname">Last Name:</label></td>
                 <td>
-                    <input 
-                    type="text"
-                    name="lname" 
-                    id="lname" 
-                    maxlength="30" 
-                    title="Letter, apostrophes, and dashes only" 
-                    required pattern="[a-zA-Z']{1,30}"
-                    onblur="validatelname()" 
-                    title="Letters only" 
-                    placeholder="Last name"
-                    />
+                    <input type="text" name="lname" id="lname" maxlength="30" pattern="[a-zA-Z']{1,30}" required placeholder="Last name" onblur="validatelname()" />
                     <span class="error" id="lname-error"></span>
                 </td>
             </tr>
+
+            <!-- Gender and DOB -->
             <tr>
                 <td><label for="gender">Gender:</label></td>
                 <td>
@@ -88,28 +61,17 @@
             </tr>
             <tr>
                 <td><label for="dob">Date of Birth:</label></td>
-            <td>
-                    <input 
-                    type="date" 
-                    id="dob" 
-                    name="dob" 
-                    onblur="validateDob()"
-                    required
-                />
+                <td>
+                    <input type="date" id="dob" name="dob" required onblur="validateDob()" />
                     <span class="error" id="dob-error"></span>
-             </td>
+                </td>
             </tr>
+
+            <!-- Address -->
             <tr>
                 <td><label for="address1">Address Line 1:</label></td>
                 <td>
-                    <input 
-                    type="text" 
-                    name="address1" 
-                    id="address1" 
-                    maxlength="30" 
-                    onblur="validateAddress1()" 
-                    required placeholder="Enter Address 1"
-                    />
+                    <input type="text" name="address1" id="address1" maxlength="30" required placeholder="Enter Address 1" onblur="validateAddress1()" />
                 </td>
             </tr>
             <tr>
@@ -173,6 +135,7 @@
                         <option value="WV">West Virginia</option>
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
+                        <!-- Add all 50 states as needed -->
                     </select>
                     <span class="error" id="state-error"></span>
                 </td>
@@ -180,30 +143,16 @@
             <tr>
                 <td><label for="city">City:</label></td>
                 <td>
-                    <input 
-                    type="text" 
-                    name="city" 
-                    id="city" 
-                    maxlength="50" 
-                    required pattern="[a-zA-Z ]+" 
-                    title="Letters only" 
-                    placeholder="Enter City">
+                    <input type="text" name="city" id="city" maxlength="50" required pattern="[a-zA-Z ]+" placeholder="Enter City" />
                     <span class="error" id="city-error"></span>
                 </td>
             </tr>
+
+            <!-- SSN and Status -->
             <tr>
                 <td><label for="SSN">Social Security Number:</label></td>
                 <td>
-                    <input 
-                    type="password" 
-                    name="SSN"
-                    id="SSN"
-                    maxlength="9" 
-                    required pattern="\d{9}" 
-                    onblur="validateSsn()" 
-                    title="9-digit number" 
-                    placeholder="SSN"
-                    />
+                    <input type="password" name="SSN" id="SSN" maxlength="9" required pattern="\d{9}" placeholder="SSN" onblur="validateSsn()" />
                     <span class="error" id="SSN-error"></span>
                 </td>
             </tr>
@@ -218,88 +167,49 @@
                     <input type="checkbox" name="pre-con" value="n/a"> N/A
                 </td>
             </tr>
+
+            <!-- Slider and Phone -->
             <tr>
-                <td class="td1"><label for="range">Health lost in battle?</label></td>
+                <td><label for="range">Health lost in battle?</label></td>
                 <td>
-                   <input
-                    type="range"
-                    name="range"
-                    id="range"
-                    min="1"
-                    max="50"
-                    value="0"
-                    />
+                    <input type="range" name="range" id="range" min="1" max="50" value="0" />
                     <span id="range-slider"></span>
-                 </td>
-               </tr>
-               <tr>
-                <td><label for="Pnum">Phone Number:</label></td>
-                <td>
-                    <input 
-                    type="text" 
-                    name="Pnum"
-                    id="Pnum"
-                    maxlength="9" 
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                    onblur="validatePnum()" 
-                    title="Phone number" 
-                    placeholder="Phone Number"
-                    />
-                    <span class="error" id="SSN-error"></span>
                 </td>
             </tr>
+            <tr>
+                <td><label for="Pnum">Phone Number:</label></td>
+                <td>
+                    <input type="text" name="Pnum" id="Pnum" maxlength="12" placeholder="Phone Number" onblur="validatePnum()" />
+                    <span class="error" id="Pnum-error"></span>
+                </td>
+            </tr>
+
+            <!-- Email and UID -->
             <tr>
                 <td><label for="email">Email:</label></td>
                 <td>
-                    <input 
-                    type="Email" 
-                    name="Email" 
-                    id="Email" 
-                    maxlength="50" 
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
-                    onblur="validateEmail()"
-                    title="Alphanumeric characters only"
-                    placeholder="Enter Email"
-                    />
+                    <input type="email" name="Email" id="Email" maxlength="50" placeholder="Enter Email" onblur="validateEmail()" />
                     <span class="error" id="uid-error"></span>
                 </td>
+            </tr>
             <tr>
                 <td><label for="uid">User ID:</label></td>
                 <td>
-                    <input 
-                    type="text" 
-                    name="uid" 
-                    id="uid" 
-                    maxlength="20" 
-                    required pattern="[a-zA-Z0-9]+"
-                    title="Alphanumeric characters only" 
-                    placeholder="Your user ID"
-                    />
+                    <input type="text" name="uid" id="uid" maxlength="20" required pattern="[a-zA-Z0-9]+" placeholder="Your user ID" onblur="validateUid()" />
                     <span class="error" id="uid-error"></span>
                 </td>
             </tr>
+
+            <!-- Password -->
             <tr>
                 <td><label for="pword">Password:</label></td>
                 <td>
-                    <input 
-                    type="password" 
-                    name="pword" 
-                    id="pword" 
-                    minlength="10" 
-                    required placeholder="Create password"
-                    onblur="validatepword()"
-                    oninput="validatepword()"
-                    onfocus="validatepword()"
-                    />
-                    <span class="error" id="pword-error">
-                    </span>
-                    <label for="con_pword"
-                    onblur="confirmpword()"
-                    oninput="confirmpword()"
-                    onfocus="confirmpword()">
-                    </label>
+                    <input type="password" name="pword" id="pword" minlength="10" required placeholder="Create password" onblur="validatepword()" oninput="validatepword()" onfocus="validatepword()" />
+                    <span class="error" id="pword-error"></span>
                 </td>
             </tr>
+
+            <!-- Buttons -->
             <tr>
                 <td colspan="4">
                     <center>
@@ -311,8 +221,14 @@
             </tr>
         </table>
     </form>
+
+    <!-- Review Output Section -->
+    <div id="showInput"></div>
+
     <footer>
-        <p>&#169; Poki Doc Jason L. <a href="linkedin.com/hirejasonle">Contact me!</a></p>
+        <p>&#169; Poki Doc Jason L. <a href="https://linkedin.com/hirejasonle">Contact me!</a></p>
     </footer>
+
+    <script src="C:\Users\jason\OneDrive\Documents\GitHub\MIS3374\HW2github\hwtesteditfile2.5.js"></script>
 </body>
 </html>

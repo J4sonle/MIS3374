@@ -6,7 +6,7 @@ Version: 2.1
 Description: Homework 2.5 JavaScript
 */
 
-alert("JavaScript is working!");
+alert("js test!!!!!!!!!!");
 
 // Display today's date
 var d = new Date();
